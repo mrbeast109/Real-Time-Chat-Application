@@ -4,6 +4,10 @@ import { NavLink, useNavigate } from 'react-router-dom'
 const BG =
   'https://images.unsplash.com/photo-1471922694854-ff1b63b20054?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmVhY2glMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D'
 
+const API = import.meta.env.VITE_BACKEND_URL
+  ? `${import.meta.env.VITE_BACKEND_URL}/api`
+  : '/api'
+
 export default function Signup() {
   const navigate = useNavigate()
 
@@ -44,7 +48,7 @@ export default function Signup() {
       formData.append('password', password)
       if (picFile) formData.append('pic', picFile)
 
-      const res = await fetch('/api/user', {
+      const res = await fetch(`${API}/user`, {
         method: 'POST',
         body:   formData,
       })
