@@ -1,0 +1,14 @@
+name: Globals
+values:
+  - key: TOKEN
+    value: ''
+    enabled: true
+  - key: URL
+    value: ''
+    enabled: true
+  - key: TOKEN1
+    value: ''
+    enabled: true
+  - key: NEWTOKEN
+    value: ''
+    enabled: true
