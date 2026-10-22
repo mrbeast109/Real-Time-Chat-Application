@@ -16,19 +16,29 @@ connectDB();
 const app = express();
 const server = http.createServer(app);
 
-const ALLOWED_ORIGINS = process.env.FRONTEND_URL
-    ? [process.env.FRONTEND_URL, 'http://localhost:5173']
-    : ['http://localhost:5173', 'http://192.168.0.191:5173'];
+const corsOptions = {
+    origin: (origin, callback) => {
+        const allowed = [
+            'http://localhost:5173',
+            'http://localhost:3000',
+            process.env.FRONTEND_URL,
+        ].filter(Boolean);
+
+        if (!origin || allowed.includes(origin) || /\.vercel\.app$/.test(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true,
+};
 
 const io = new Server(server, {
     pingTimeout: 60000,
-    cors: {
-        origin: ALLOWED_ORIGINS,
-        credentials: true,
-    },
+    cors: corsOptions,
 });
 
-app.use(cors({ origin: ALLOWED_ORIGINS, credentials: true }));
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get('/', (req, res) => {
