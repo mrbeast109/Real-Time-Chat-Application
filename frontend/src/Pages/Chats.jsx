@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { io } from 'socket.io-client';
 import { ChatState } from '../context/ChatProvider';
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || `http://${window.location.hostname}:5000`;
+const BACKEND_URL = (import.meta.env.VITE_BACKEND_URL || `http://${window.location.hostname}:5000`).replace(/\/$/, '');
 const API = `${BACKEND_URL}/api`;
 const SOCKET_ENDPOINT = BACKEND_URL;
 let socket;

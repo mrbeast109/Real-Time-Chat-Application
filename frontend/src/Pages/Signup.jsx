@@ -5,7 +5,7 @@ const BG =
   'https://images.unsplash.com/photo-1471922694854-ff1b63b20054?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmVhY2glMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D'
 
 const API = import.meta.env.VITE_BACKEND_URL
-  ? `${import.meta.env.VITE_BACKEND_URL}/api`
+  ? `${import.meta.env.VITE_BACKEND_URL.replace(/\/$/, '')}/api`
   : '/api'
 
 export default function Signup() {
