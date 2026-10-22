@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { io } from 'socket.io-client';
 import { ChatState } from '../context/ChatProvider';
 
-const BACKEND_HOST = window.location.hostname;
-const API = `http://${BACKEND_HOST}:5000/api`;
-const SOCKET_ENDPOINT = `http://${BACKEND_HOST}:5000`;
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || `http://${window.location.hostname}:5000`;
+const API = `${BACKEND_URL}/api`;
+const SOCKET_ENDPOINT = BACKEND_URL;
 let socket;
 
 function getInitials(name = '') {
