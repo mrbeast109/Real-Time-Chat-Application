@@ -480,7 +480,7 @@ function NotifDropdown({ notifications, onClose, onClickNotif }) {
 
   return (
     <div ref={ref} style={{
-      position: 'absolute', top: 48, right: 60, zIndex: 99999,
+      position: 'fixed', top: 58, right: 72, zIndex: 99999,
       background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)',
       border: '1px solid rgba(255,255,255,0.6)', borderRadius: 16,
       boxShadow: '0 8px 32px rgba(0,0,0,0.22)',
@@ -634,7 +634,7 @@ export default function Chats() {
         .chat-back-btn { display: none; align-items: center; justify-content: center; background: none; border: none; cursor: pointer; padding: 4px; margin-right: 8px; color: #444; }
       `}</style>
 
-      <header style={{ height: 52, display: 'flex', alignItems: 'center', padding: '0 20px', background: 'rgba(255,255,255,0.55)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(255,255,255,0.4)', flexShrink: 0, gap: 16, position: 'relative' }}>
+      <header style={{ height: 52, display: 'flex', alignItems: 'center', padding: '0 20px', background: 'rgba(255,255,255,0.55)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(255,255,255,0.4)', flexShrink: 0, gap: 16, position: 'relative', zIndex: 1000 }}>
         <button onClick={() => setSearchOpen(true)} style={{ display: 'flex', alignItems: 'center', gap: 6, background: 'none', border: 'none', cursor: 'pointer', fontSize: 14, color: '#444', padding: 0 }}>
           <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
           Search User
