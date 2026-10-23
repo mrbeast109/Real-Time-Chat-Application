@@ -109,7 +109,7 @@ export default function Signup() {
           style={{ background: 'rgba(255,255,255,0.13)', backdropFilter: 'blur(24px) saturate(1.6)', WebkitBackdropFilter: 'blur(24px) saturate(1.6)', boxShadow: '0 8px 48px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.28)' }}
         >
           <h1 className="text-[28px] font-bold text-white leading-tight tracking-tight">Create account</h1>
-          <p className="text-[14px] text-white/60 leading-relaxed mt-2 mb-8">Join MyChat and start chatting today.</p>
+          <p className="text-[14px] text-white/60 leading-relaxed mt-2 mb-8">Create your account.</p>
 
           {error && (
             <div className="mb-5 px-4 py-3 rounded-xl text-[13px] text-red-200 border border-red-400/40" style={{ background: 'rgba(220,38,38,0.18)' }}>
@@ -162,12 +162,12 @@ export default function Signup() {
 
             <div className="flex flex-col gap-2">
               <label htmlFor="sg-name" className="text-[11px] font-semibold uppercase tracking-widest text-white/70">Full Name</label>
-              <input id="sg-name" type="text" placeholder="John Doe" autoComplete="name" value={name} onChange={e => setName(e.target.value)} required className="sg-input w-full rounded-xl border border-white/20 text-[15px] text-white px-4 py-[13px] transition-all duration-200" style={{ background: 'rgba(255,255,255,0.10)' }} />
+              <input id="sg-name" type="text" placeholder="Your name" autoComplete="name" value={name} onChange={e => setName(e.target.value)} required className="sg-input w-full rounded-xl border border-white/20 text-[15px] text-white px-4 py-[13px] transition-all duration-200" style={{ background: 'rgba(255,255,255,0.10)' }} />
             </div>
 
             <div className="flex flex-col gap-2">
               <label htmlFor="sg-email" className="text-[11px] font-semibold uppercase tracking-widest text-white/70">Email</label>
-              <input id="sg-email" type="email" placeholder="you@example.com" autoComplete="email" value={email} onChange={e => setEmail(e.target.value)} required className="sg-input w-full rounded-xl border border-white/20 text-[15px] text-white px-4 py-[13px] transition-all duration-200" style={{ background: 'rgba(255,255,255,0.10)' }} />
+              <input id="sg-email" type="email" placeholder="Email address" autoComplete="email" value={email} onChange={e => setEmail(e.target.value)} required className="sg-input w-full rounded-xl border border-white/20 text-[15px] text-white px-4 py-[13px] transition-all duration-200" style={{ background: 'rgba(255,255,255,0.10)' }} />
             </div>
 
             <div className="flex flex-col gap-2">

@@ -69,10 +69,10 @@ function Home() {
 
           <div>
             <h1 style={{ margin: 0, fontSize: 36, fontWeight: 800, color: '#fff', lineHeight: 1.15, letterSpacing: '-0.5px' }}>
-              Hello There!
+              MyChat
             </h1>
             <p style={{ margin: '10px 0 0', fontSize: 16, color: 'rgba(255,255,255,0.62)', lineHeight: 1.6 }}>
-              Connect instantly. Chat effortlessly.
+              Real-time messaging for everyone.
             </p>
           </div>
 

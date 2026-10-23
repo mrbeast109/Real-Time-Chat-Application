@@ -412,7 +412,7 @@ function GroupChatModal({ token, meId, onCreated, onClose }) {
           <div>
             <label style={{ fontSize: 11, fontWeight: 600, color: '#888', textTransform: 'uppercase', letterSpacing: 1 }}>Group Name</label>
             <input
-              placeholder="e.g. Weekend Squad"
+              placeholder="Group name"
               value={chatName}
               onChange={e => { setChatName(e.target.value); setError(''); }}
               style={{ width: '100%', marginTop: 6, padding: '9px 12px', border: '1px solid #e0e0e0', borderRadius: 8, fontSize: 14, boxSizing: 'border-box', outline: 'none' }}
@@ -747,7 +747,7 @@ export default function Chats() {
                     </div>
                   );
                 })}
-                {!msgsLoading && messages.length === 0 && <p style={{ textAlign: 'center', color: '#aaa', fontSize: 13, marginTop: 40 }}>No messages yet. Say hi!</p>}
+                {!msgsLoading && messages.length === 0 && <p style={{ textAlign: 'center', color: '#aaa', fontSize: 13, marginTop: 40 }}>No messages yet.</p>}
                 <div ref={msgEndRef} />
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '12px 16px', borderTop: '1px solid rgba(0,0,0,0.06)', background: 'rgba(255,255,255,0.6)' }}>
